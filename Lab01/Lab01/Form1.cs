@@ -26,6 +26,8 @@ namespace Lab01
             {
                 if (comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1)
                     throw new NullReferenceException();
+                else if (textBox1.Text.Length == 0)
+                    throw new ArgumentNullException();
 
                 float currentSize = float.Parse(textBox1.Text);
                 int currentType = comboBox1.SelectedIndex;
@@ -35,6 +37,10 @@ namespace Lab01
             catch (NullReferenceException ex)
             {
                 MessageBox.Show("Выберите тип размеров");
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show("Введены неверные данные!");
             }
             catch (ArgumentException ex)
             {
@@ -56,7 +62,7 @@ namespace Lab01
                     throw new FormatException();
                 }
             }
-            catch(FormatException ex)
+            catch (FormatException ex)
             {
                 MessageBox.Show("Введены неверные данные!");
             }
@@ -65,7 +71,7 @@ namespace Lab01
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-            label6.Text = "                             ";
+            label6.Text = "";
             comboBox1.SelectedIndex = -1;
             comboBox2.SelectedIndex = -1;
         }

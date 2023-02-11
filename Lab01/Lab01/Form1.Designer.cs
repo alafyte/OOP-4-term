@@ -155,13 +155,12 @@ namespace Lab01
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(258, 172);
+            this.label6.BackColor = System.Drawing.Color.Salmon;
+            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(313, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 27);
+            this.label6.Size = new System.Drawing.Size(0, 41);
             this.label6.TabIndex = 14;
-            this.label6.Text = "                             ";
             // 
             // button2
             // 
