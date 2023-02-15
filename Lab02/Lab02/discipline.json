@@ -1,0 +1,17 @@
+{
+  "DisciplineName": "sfdfsfd",
+  "Term": [
+    1,
+    2
+  ],
+  "Course": 2,
+  "Speciality": 2,
+  "NumberOfLectures": 22,
+  "NumberOfLabs": 22,
+  "TypeOfControl": 1,
+  "Lector": {
+    "Department": "saad",
+    "Name": "dsdsd",
+    "NumberOfClassrom": 23
+  }
+}
