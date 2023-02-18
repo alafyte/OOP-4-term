@@ -1,0 +1,14 @@
+{
+  "DisciplineName": "Паттерны проектирования",
+  "Term": 4,
+  "Course": 2,
+  "Speciality": 1,
+  "NumberOfLectures": 50,
+  "NumberOfLabs": 40,
+  "TypeOfControl": 0,
+  "Lector": {
+    "Department": "Информационных систем и технологий",
+    "Name": "Смелов Владимир Владиславович",
+    "NumberOfClassrom": 306
+  }
+}

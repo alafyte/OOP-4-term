@@ -1,0 +1,14 @@
+{
+  "DisciplineName": "Графический дизайн",
+  "Term": 4,
+  "Course": 2,
+  "Speciality": 3,
+  "NumberOfLectures": 60,
+  "NumberOfLabs": 40,
+  "TypeOfControl": 1,
+  "Lector": {
+    "Department": "Информатики и веб-дизайна",
+    "Name": "Новосельская Ольга Александровна",
+    "NumberOfClassrom": 213
+  }
+}

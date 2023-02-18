@@ -1,0 +1,14 @@
+{
+  "DisciplineName": "Физика",
+  "Term": 2,
+  "Course": 1,
+  "Speciality": 0,
+  "NumberOfLectures": 50,
+  "NumberOfLabs": 32,
+  "TypeOfControl": 1,
+  "Lector": {
+    "Department": "Физики",
+    "Name": "Мисевич Алексей Васильевич",
+    "NumberOfClassrom": 507
+  }
+}

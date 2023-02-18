@@ -1,0 +1,14 @@
+{
+  "DisciplineName": "Дискретная математика",
+  "Term": 3,
+  "Course": 2,
+  "Speciality": 0,
+  "NumberOfLectures": 26,
+  "NumberOfLabs": 24,
+  "TypeOfControl": 1,
+  "Lector": {
+    "Department": "Программной инженерии",
+    "Name": "Иванюкович Владимир Александрович",
+    "NumberOfClassrom": 408
+  }
+}

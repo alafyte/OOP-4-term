@@ -1,0 +1,30 @@
+[
+  {
+    "DisciplineName": "Графический дизайн",
+    "Term": 4,
+    "Course": 2,
+    "Speciality": 3,
+    "NumberOfLectures": 60,
+    "NumberOfLabs": 40,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Информатики и веб-дизайна",
+      "Name": "Новосельская Ольга Александровна",
+      "NumberOfClassrom": 213
+    }
+  },
+  {
+    "DisciplineName": "Основы программной инженерии",
+    "Term": 1,
+    "Course": 1,
+    "Speciality": 0,
+    "NumberOfLectures": 30,
+    "NumberOfLabs": 34,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Программной инженерии",
+      "Name": "Наркевич Аделина Сергеевна",
+      "NumberOfClassrom": 408
+    }
+  }
+]

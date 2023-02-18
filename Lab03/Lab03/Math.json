@@ -1,0 +1,14 @@
+{
+  "DisciplineName": "Линейная алгебра и аналитическая геометрия",
+  "Term": 1,
+  "Course": 1,
+  "Speciality": 0,
+  "NumberOfLectures": 34,
+  "NumberOfLabs": 34,
+  "TypeOfControl": 0,
+  "Lector": {
+    "Department": "Высшей математики",
+    "Name": "Чайковский Михаил Викторович",
+    "NumberOfClassrom": 318
+  }
+}

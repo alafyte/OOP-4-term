@@ -1,0 +1,86 @@
+[
+  {
+    "DisciplineName": "Дискретная математика",
+    "Term": 3,
+    "Course": 2,
+    "Speciality": 0,
+    "NumberOfLectures": 26,
+    "NumberOfLabs": 24,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Программной инженерии",
+      "Name": "Иванюкович Владимир Александрович",
+      "NumberOfClassrom": 408
+    }
+  },
+  {
+    "DisciplineName": "Основы программной инженерии",
+    "Term": 1,
+    "Course": 1,
+    "Speciality": 0,
+    "NumberOfLectures": 30,
+    "NumberOfLabs": 34,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Программной инженерии",
+      "Name": "Наркевич Аделина Сергеевна",
+      "NumberOfClassrom": 408
+    }
+  },
+  {
+    "DisciplineName": "Линейная алгебра и аналитическая геометрия",
+    "Term": 1,
+    "Course": 1,
+    "Speciality": 0,
+    "NumberOfLectures": 34,
+    "NumberOfLabs": 34,
+    "TypeOfControl": 0,
+    "Lector": {
+      "Department": "Высшей математики",
+      "Name": "Чайковский Михаил Викторович",
+      "NumberOfClassrom": 318
+    }
+  },
+  {
+    "DisciplineName": "Физика",
+    "Term": 2,
+    "Course": 1,
+    "Speciality": 0,
+    "NumberOfLectures": 50,
+    "NumberOfLabs": 32,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Физики",
+      "Name": "Мисевич Алексей Васильевич",
+      "NumberOfClassrom": 507
+    }
+  },
+  {
+    "DisciplineName": "Паттерны проектирования",
+    "Term": 4,
+    "Course": 2,
+    "Speciality": 1,
+    "NumberOfLectures": 50,
+    "NumberOfLabs": 40,
+    "TypeOfControl": 0,
+    "Lector": {
+      "Department": "Информационных систем и технологий",
+      "Name": "Смелов Владимир Владиславович",
+      "NumberOfClassrom": 306
+    }
+  },
+  {
+    "DisciplineName": "Графический дизайн",
+    "Term": 4,
+    "Course": 2,
+    "Speciality": 3,
+    "NumberOfLectures": 60,
+    "NumberOfLabs": 40,
+    "TypeOfControl": 1,
+    "Lector": {
+      "Department": "Информатики и веб-дизайна",
+      "Name": "Новосельская Ольга Александровна",
+      "NumberOfClassrom": 213
+    }
+  }
+]
