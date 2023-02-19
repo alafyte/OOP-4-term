@@ -25,7 +25,7 @@ namespace Lab03
         }
         public override string ToString()
         {
-            return $"Имя: {Name}, кафедра: {Department}, аудитория: {NumberOfClassrom}";
+            return $"Имя: {Name}, Кафедра {Department}, аудитория: {NumberOfClassrom}";
         }
     }
 }

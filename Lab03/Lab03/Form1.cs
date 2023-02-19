@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -50,7 +51,7 @@ namespace Lab03
             OutputForm.ShowDialog();
             try
             {
-                if (!(dicsCalled && lectCalled) && OutputForm.FileName.Length == 0)
+                if (OutputForm.FileName.Length == 0)
                     throw new NullReferenceException();
                 string json = File.ReadAllText(OutputForm.FileName);
                 DisciplineBase.disciplines.Add(JsonSerializer.Deserialize<Discipline>(json));
@@ -62,7 +63,11 @@ namespace Lab03
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("Ошибка при создании объекта");
+                MessageBox.Show("Выберите файл");
+            }
+            catch (JsonException)
+            {
+                MessageBox.Show("Ошибка при десериализации");
             }
         }
 
@@ -145,6 +150,42 @@ namespace Lab03
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             button8_Click(sender, e);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OutputForm.ShowDialog();
+            try
+            {
+                if (OutputForm.FileName.Length == 0)
+                    throw new NullReferenceException();
+                string json = File.ReadAllText(OutputForm.FileName);
+                foreach(var d in JsonSerializer.Deserialize<List<Discipline>>(json))
+                {
+                    DisciplineBase.disciplines.Add(d);
+                }
+                DisciplineBase.statistics.Add(new Statistics(UserAction.Add, DisciplineBase.disciplines.Count, DateTime.Now));
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = DisciplineBase.disciplines;
+                dataGridView2.DataSource = null;
+                dataGridView2.DataSource = DisciplineBase.statistics.TakeLast(1).ToList();
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Выберите файл");
+            }
+            catch (JsonException)
+            {
+                MessageBox.Show("Ошибка при десериализации");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (menuStrip1.Visible)
+                menuStrip1.Hide();
+            else
+                menuStrip1.Show();
         }
     }
 }

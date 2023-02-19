@@ -50,6 +50,8 @@ namespace Lab03
             this.добавитьОбъектToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -96,7 +98,7 @@ namespace Lab03
             // 
             this.button4.BackColor = System.Drawing.Color.Snow;
             this.button4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(664, 468);
+            this.button4.Location = new System.Drawing.Point(516, 468);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 77);
             this.button4.TabIndex = 4;
@@ -112,7 +114,7 @@ namespace Lab03
             // 
             this.button6.BackColor = System.Drawing.Color.Snow;
             this.button6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(414, 468);
+            this.button6.Location = new System.Drawing.Point(289, 468);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(169, 77);
             this.button6.TabIndex = 6;
@@ -124,7 +126,7 @@ namespace Lab03
             // 
             this.button7.BackColor = System.Drawing.Color.Snow;
             this.button7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(162, 468);
+            this.button7.Location = new System.Drawing.Point(78, 468);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(169, 77);
             this.button7.TabIndex = 7;
@@ -136,7 +138,7 @@ namespace Lab03
             // 
             this.button8.BackColor = System.Drawing.Color.Snow;
             this.button8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(934, 468);
+            this.button8.Location = new System.Drawing.Point(973, 468);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(169, 77);
             this.button8.TabIndex = 8;
@@ -193,7 +195,7 @@ namespace Lab03
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1236, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1236, 25);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -201,7 +203,7 @@ namespace Lab03
             // 
             this.поискToolStripMenuItem1.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.поискToolStripMenuItem1.Name = "поискToolStripMenuItem1";
-            this.поискToolStripMenuItem1.Size = new System.Drawing.Size(64, 24);
+            this.поискToolStripMenuItem1.Size = new System.Drawing.Size(64, 21);
             this.поискToolStripMenuItem1.Text = "Поиск";
             this.поискToolStripMenuItem1.Click += new System.EventHandler(this.поискToolStripMenuItem1_Click);
             // 
@@ -209,7 +211,7 @@ namespace Lab03
             // 
             this.сортировкаToolStripMenuItem.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.сортировкаToolStripMenuItem.Name = "сортировкаToolStripMenuItem";
-            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(102, 21);
             this.сортировкаToolStripMenuItem.Text = "Сортировка";
             this.сортировкаToolStripMenuItem.Click += new System.EventHandler(this.сортировкаToolStripMenuItem_Click);
             // 
@@ -217,7 +219,7 @@ namespace Lab03
             // 
             this.добавитьОбъектToolStripMenuItem.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.добавитьОбъектToolStripMenuItem.Name = "добавитьОбъектToolStripMenuItem";
-            this.добавитьОбъектToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.добавитьОбъектToolStripMenuItem.Size = new System.Drawing.Size(139, 21);
             this.добавитьОбъектToolStripMenuItem.Text = "Добавить объект";
             this.добавитьОбъектToolStripMenuItem.Click += new System.EventHandler(this.добавитьОбъектToolStripMenuItem_Click);
             // 
@@ -225,7 +227,7 @@ namespace Lab03
             // 
             this.сохранитьToolStripMenuItem.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -233,9 +235,33 @@ namespace Lab03
             // 
             this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(109, 21);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Snow;
+            this.button5.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(748, 468);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(169, 77);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Добавить коллекцию объектов из файла";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(1212, -3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 28);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "...";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -244,6 +270,8 @@ namespace Lab03
             this.BackgroundImage = global::Lab03.Properties.Resources.bck;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 573);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -300,6 +328,8 @@ namespace Lab03
         private ToolStripMenuItem добавитьОбъектToolStripMenuItem;
         private ToolStripMenuItem сохранитьToolStripMenuItem;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private Button button5;
+        private Label label1;
     }
 }
 
