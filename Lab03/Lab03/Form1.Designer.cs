@@ -309,17 +309,6 @@ namespace Lab03
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn disciplineNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn termDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfLecturesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfLabsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfControlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lectorDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn userActionDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn numberOfObjectsDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem поискToolStripMenuItem;
         private MenuStrip menuStrip1;
