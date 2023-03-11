@@ -1,0 +1,81 @@
+﻿<Page x:Class="Lab04_05.ProductsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lab04_05"
+      xmlns:w="clr-namespace:Lab04_05"
+      mc:Ignorable="d" 
+      d:DesignHeight="380" d:DesignWidth="735"
+      Title="ProductsPage">
+
+    <Page.Resources>
+        <ResourceDictionary Source="Resources/Styles.xaml"/>
+    </Page.Resources>
+    <Page.CommandBindings>
+        <CommandBinding Command="w:Command.AddCommand" Executed="AddProduct"></CommandBinding>
+        <CommandBinding Command="w:Command.UpdateCommand" Executed="EditButton"></CommandBinding>
+        <CommandBinding Command="w:Command.DeleteCommand" Executed="DeleteProduct"></CommandBinding>
+    </Page.CommandBindings>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="213*"/>
+            <RowDefinition Height="140*" />
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="527*"/>
+            <ColumnDefinition Width="207*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Button HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Command="w:Command.AddCommand"                
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Content="{DynamicResource Add}"
+                    Foreground="White"
+                    Margin="10,7,386,2" Height="40" Cursor=""/>
+
+        <Button x:Name="editBtn" HorizontalAlignment="Center" Command="w:Command.UpdateCommand"
+                Grid.Column="0" Grid.Row="0" 
+                Margin="172,7,224,2"                 
+                Style="{StaticResource MaterialDesignPaperLightButton}"
+                Content="{DynamicResource Edit}"
+                Foreground="#80CBC4"
+                IsEnabled="False" Height="40" Cursor="" />
+
+        <Button HorizontalAlignment="Center" x:Name="deleteBtn"
+                 Command="w:Command.DeleteCommand"
+                 Grid.Column="0" Grid.Row="0" Margin="336,7,61,2"
+                 Style="{StaticResource MaterialDesignPaperLightButton}"
+                 Content="{DynamicResource Delete}"
+                 Foreground="#80CBC4"
+                 IsEnabled="False"
+                 Height="40" Cursor="" />
+
+        <TextBox Grid.Row="0" Grid.Column="1" KeyDown="Search"
+                 x:Name="SearchField"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 VerticalAlignment="Top"
+                 materialDesign:TextFieldAssist.HasClearButton="True" Margin="0,5,10.2,0" Height="42" >
+
+            <materialDesign:HintAssist.Hint>
+
+                <StackPanel Orientation="Horizontal"   Margin="-2 0 0 0">
+                    <materialDesign:PackIcon       Kind="Search" />
+                    <TextBlock Text="{DynamicResource Search}" />
+                </StackPanel>
+
+            </materialDesign:HintAssist.Hint>
+        </TextBox>
+
+        <!-- products panel -->
+        <ScrollViewer x:Name="scrollBarViewer" Margin="10" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="4">
+            <WrapPanel x:Name="products" />
+        </ScrollViewer>
+    </Grid>
+</Page>

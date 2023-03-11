@@ -1,0 +1,18 @@
+[
+  {
+    "ProductTypeId": 1,
+    "PType": "Necklace"
+  },
+  {
+    "ProductTypeId": 2,
+    "PType": "Ring"
+  },
+  {
+    "ProductTypeId": 3,
+    "PType": "Earring"
+  },
+  {
+    "ProductTypeId": 4,
+    "PType": "Wristwear"
+  }
+]
