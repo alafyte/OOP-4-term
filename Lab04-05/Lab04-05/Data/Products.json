@@ -284,31 +284,5 @@
     "isActive": 1,
     "ProductType": 4,
     "productType": null
-  },
-  {
-    "ProductCode": 23,
-    "PNameEn": "dhdhdh",
-    "PNameRus": "hfhfh",
-    "Price": 45,
-    "Quantity": 125,
-    "PImage": "cat.jpg",
-    "PDescriptionEn": "",
-    "PDescriptionRus": "",
-    "isActive": 0,
-    "ProductType": 3,
-    "productType": null
-  },
-  {
-    "ProductCode": 24,
-    "PNameEn": "попорп",
-    "PNameRus": "нпнор",
-    "Price": 234,
-    "Quantity": 455,
-    "PImage": "cat.jpg",
-    "PDescriptionEn": "",
-    "PDescriptionRus": "",
-    "isActive": 0,
-    "ProductType": 2,
-    "productType": null
   }
 ]

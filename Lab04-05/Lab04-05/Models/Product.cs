@@ -91,7 +91,7 @@ namespace Lab04_05
                 RaisePropertyChangedEvent("Price");
             }
         }
-        [Range(1, 100000, ErrorMessage = "WrongProductPrice")]
+        [Range(1, 100000, ErrorMessage = "WrongProductQuantity")]
         public int Quantity 
         { 
             get
