@@ -1,0 +1,69 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:MyLib" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Style TargetType="{x:Type local:CustomControl1}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CustomControl1}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Button x:Name="CloseButton">
+                            <Button.Style>
+                                <Style>
+                                    <Style.Setters>
+                                        <Setter Property="Button.Background" Value="Transparent"></Setter>
+                                        <Setter Property="Button.Width" Value="50"></Setter>
+                                        <Setter Property="Button.Height" Value="34"></Setter>
+                                        <Setter Property="Button.Content" Value="X"></Setter>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <!--Multi trigger-->
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="Button.IsKeyboardFocused" Value="False"/>
+                                            </MultiTrigger.Conditions>
+                                            <MultiTrigger.Setters>
+                                                <Setter Property="Button.BorderBrush" Value="Teal"/>
+                                            </MultiTrigger.Setters>
+                                        </MultiTrigger>
+                                        <!--Event trigger-->
+                                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                                            <EventTrigger.Actions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Duration="0:0:0.300" Storyboard.TargetProperty="FontSize" To="20" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger.Actions>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                                            <EventTrigger.Actions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation Duration="0:0:0.800" Storyboard.TargetProperty="FontSize" To="16" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </EventTrigger.Actions>
+                                        </EventTrigger>
+                                        <!--Data trigger-->
+                                        <DataTrigger Binding="{Binding Path=BorderThickness}" Value="0">
+                                            <Setter Property="Button.Foreground" Value="Teal" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                                </Button.Resources>
+                        </Button>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

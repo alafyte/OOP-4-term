@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\1.jpg" />
+    <None Remove="images\1613402939_16-p-bezhevii-kosmos-fon-21.jpg" />
+    <None Remove="images\AirElementGoldNecklace.jpg" />
+    <None Remove="images\cat.jpg" />
+    <None Remove="images\CrescentKeyBracelet.jpg" />
+    <None Remove="images\EarthElementGoldNecklace.jpg" />
+    <None Remove="images\FireElementGoldNecklace.jpg" />
+    <None Remove="images\Heartseekerhoopearrings.jpg" />
+    <None Remove="images\HonorHeartMantraRing.jpg" />
+    <None Remove="images\icon.ico" />
+    <None Remove="images\icons8-align-left-16.png" />
+    <None Remove="images\img.jpg" />
+    <None Remove="images\IMG_20220315_174839_944.jpg" />
+    <None Remove="images\logo.png" />
+    <None Remove="images\mainImage.jpg" />
+    <None Remove="images\mainPhoto.jpg" />
+    <None Remove="images\mainPhoto3.jpg" />
+    <None Remove="images\Minecraft_ 1.18 - Одиночная игра 12_12_2021 3_07_13 PM.png" />
+    <None Remove="images\MoonphaseIvoryGoldRing.jpg" />
+    <None Remove="images\MoonphaseMauveGoldRing.jpg" />
+    <None Remove="images\OutofThisWorldBracelet.jpg" />
+    <None Remove="images\PresenceRing.jpg" />
+    <None Remove="images\Rainbowringtset.jpg" />
+    <None Remove="images\StarIvoryBracelet.jpg" />
+    <None Remove="images\StarlitBracelet.jpg" />
+    <None Remove="images\StarNavyBracelet.jpg" />
+    <None Remove="images\StarTaupeHoopEarrings.jpg" />
+    <None Remove="images\SunlitDropEarrings.jpg" />
+    <None Remove="images\SunPeachHuggieEarrings.jpg" />
+    <None Remove="images\SunseekerBracelet.jpg" />
+    <None Remove="images\SunseekerGoldEarrings.jpg" />
+    <None Remove="images\Test.jpg" />
+    <None Remove="images\TodayNecklace.jpg" />
+    <None Remove="images\UnfoldHeartsignetringivory.jpg" />
+    <None Remove="images\UnfoldwhiteEarrings.jpg" />
+    <None Remove="images\UniverseNecklace.jpg" />
+    <None Remove="images\WaterElementGoldNecklace.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.1.2" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyLib\MyLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\1.jpg" />
+    <Resource Include="images\1613402939_16-p-bezhevii-kosmos-fon-21.jpg" />
+    <Resource Include="images\AirElementGoldNecklace.jpg" />
+    <Resource Include="images\cat.jpg" />
+    <Resource Include="images\CrescentKeyBracelet.jpg" />
+    <Resource Include="images\EarthElementGoldNecklace.jpg" />
+    <Resource Include="images\FireElementGoldNecklace.jpg" />
+    <Resource Include="images\Heartseekerhoopearrings.jpg" />
+    <Resource Include="images\HonorHeartMantraRing.jpg" />
+    <Resource Include="images\icon.ico" />
+    <Resource Include="images\icons8-align-left-16.png" />
+    <Resource Include="images\img.jpg" />
+    <Resource Include="images\IMG_20220315_174839_944.jpg" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\mainImage.jpg" />
+    <Resource Include="images\mainPhoto.jpg" />
+    <Resource Include="images\mainPhoto3.jpg" />
+    <Resource Include="images\Minecraft_ 1.18 - Одиночная игра 12_12_2021 3_07_13 PM.png" />
+    <Resource Include="images\MoonphaseIvoryGoldRing.jpg" />
+    <Resource Include="images\MoonphaseMauveGoldRing.jpg" />
+    <Resource Include="images\OutofThisWorldBracelet.jpg" />
+    <Resource Include="images\PresenceRing.jpg" />
+    <Resource Include="images\Rainbowringtset.jpg" />
+    <Resource Include="images\StarIvoryBracelet.jpg" />
+    <Resource Include="images\StarlitBracelet.jpg" />
+    <Resource Include="images\StarNavyBracelet.jpg" />
+    <Resource Include="images\StarTaupeHoopEarrings.jpg" />
+    <Resource Include="images\SunlitDropEarrings.jpg" />
+    <Resource Include="images\SunPeachHuggieEarrings.jpg" />
+    <Resource Include="images\SunseekerBracelet.jpg" />
+    <Resource Include="images\SunseekerGoldEarrings.jpg" />
+    <Resource Include="images\Test.jpg" />
+    <Resource Include="images\TodayNecklace.jpg" />
+    <Resource Include="images\UnfoldHeartsignetringivory.jpg" />
+    <Resource Include="images\UnfoldwhiteEarrings.jpg" />
+    <Resource Include="images\UniverseNecklace.jpg" />
+    <Resource Include="images\WaterElementGoldNecklace.jpg" />
+  </ItemGroup>
+
+</Project>
