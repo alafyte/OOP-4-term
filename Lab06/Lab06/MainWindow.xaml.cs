@@ -30,18 +30,16 @@ namespace Lab06
 
         private void ToRussian()
         {
-            ResourceDictionary resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("pack://application:,,,/Resources/StringResources.Rus.xaml");
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Remove(Settings.ResourceEnLang);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceRusLang);
             Settings.Lang = Settings.Languages.RU;
 
         }
 
         private void ToEnglish()
         {
-            ResourceDictionary resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("pack://application:,,,/Resources/StringResources.En.xaml");
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Remove(Settings.ResourceRusLang);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceEnLang);
             Settings.Lang = Settings.Languages.EN;
         }
 
@@ -72,45 +70,47 @@ namespace Lab06
 
         private void SwitchTheme1()
         {
-            ResourceDictionary resourceDictionary1 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary2 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary3 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary4 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary5 = new ResourceDictionary();
+            Application.Current.Resources.MergedDictionaries.Clear();
 
-            resourceDictionary1.Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml");
-            resourceDictionary2.Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml");
-            resourceDictionary3.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Teal.xaml");
-            resourceDictionary4.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Teal.xaml");
-            resourceDictionary5.Source = new Uri("pack://application:,,,/Resources/Teal.xaml");
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceDefaults);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceLights);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceStyles);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourcePrimaryTeal);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceAccentTeal);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceTeal);
 
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary1);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary2);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary3);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary4);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary5);
+            switch (Settings.Lang)
+            {
+                case Settings.Languages.EN:
+                    Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceEnLang);
+                    break;
+                case Settings.Languages.RU:
+                    Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceRusLang);
+                    break;
+            }
 
         }
 
         private void SwitchTheme2()
         {
-            ResourceDictionary resourceDictionary1 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary2 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary3 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary4 = new ResourceDictionary();
-            ResourceDictionary resourceDictionary5 = new ResourceDictionary();
+            Application.Current.Resources.MergedDictionaries.Clear();
 
-            resourceDictionary1.Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml");
-            resourceDictionary2.Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml");
-            resourceDictionary3.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Pink.xaml");
-            resourceDictionary4.Source = new Uri("pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Pink.xaml");
-            resourceDictionary5.Source = new Uri("pack://application:,,,/Resources/Rose.xaml");
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceDefaults);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceLights);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceStyles);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourcePrimaryPink);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceAccentPink);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourcePink);
 
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary1);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary2);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary3);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary4);
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary5);
+            switch (Settings.Lang)
+            {
+                case Settings.Languages.EN:
+                    Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceEnLang);
+                    break;
+                case Settings.Languages.RU:
+                    Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceRusLang);
+                    break;
+            }
         }
     }
 }
