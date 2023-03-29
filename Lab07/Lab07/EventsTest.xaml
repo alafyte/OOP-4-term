@@ -1,0 +1,50 @@
+﻿<Page x:Class="Lab07.EventsTest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lab07"
+      mc:Ignorable="d" 
+      d:DesignHeight="380" d:DesignWidth="735"
+      Title="EvemetsTest">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="117*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <TextBlock Text="Bubbling event" Height="100" Width="90" Margin="0,0,0,40"></TextBlock>
+            <StackPanel  Margin="0,0,0,40" GotMouseCapture="Rectangle_GotMouseCapture" VerticalAlignment="Center">
+                <Button Width="100" Height="50"  GotMouseCapture="Rectangle_GotMouseCapture">
+                    <Rectangle Fill="Orchid" RadiusX="20" RadiusY="20" GotMouseCapture="Rectangle_GotMouseCapture" Height="20" Width="40"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <TextBlock  Margin="0,0,0,40" Text="Tunneling event" Height="100" Width="90"></TextBlock>
+            <StackPanel  Margin="0,0,0,40" VerticalAlignment="Center" PreviewMouseDown="Button_PreviewMouseDown">
+                <Button  Width="100" Height="50" PreviewMouseDown="Button_PreviewMouseDown" Grid.Column="1">
+                    <Rectangle Fill="Orchid" PreviewMouseDown="Button_PreviewMouseDown" Height="20" Width="20"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="0">
+            <TextBlock  Margin="0,0,0,40" Text="Direct event" Height="100" Width="90"></TextBlock>
+            <StackPanel  Margin="0,0,0,40" MouseDown="Button_MouseDown" VerticalAlignment="Center">
+                <Button Width="100" Height="50" MouseDown="Button_MouseDown"  Grid.Column="2">
+                    <Rectangle Fill="Orchid" RadiusX="10" RadiusY="5" MouseDown="Button_MouseDown" Height="20" Width="20"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Label FontSize="10" Grid.Row="1" x:Name="testEventBubble" HorizontalAlignment="Center" VerticalAlignment="Center" Height="214" Width="225" >
+        </Label>
+        <Label  FontSize="10" Grid.Row="1" x:Name="testEventTunnel" HorizontalAlignment="Center" VerticalAlignment="Center" Height="214" Width="225" Grid.Column="1" />
+        <Label FontSize="10"  Grid.Row="1" x:Name="testEventDirect" HorizontalAlignment="Center" VerticalAlignment="Center" Height="214" Width="225" Grid.Column="2" />
+    </Grid>
+</Page>
