@@ -29,18 +29,15 @@ namespace Lab04_05
 
         private void ToRussian()
         {
-            ResourceDictionary resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("pack://application:,,,/Resources/StringResources.Rus.xaml");
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Remove(Settings.ResourceEnLang);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceRusLang);
             Settings.Lang = Settings.Languages.RU;
-
         }
 
         private void ToEnglish()
         {
-            ResourceDictionary resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("pack://application:,,,/Resources/StringResources.En.xaml");
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Remove(Settings.ResourceRusLang);
+            Application.Current.Resources.MergedDictionaries.Add(Settings.ResourceEnLang);
             Settings.Lang = Settings.Languages.EN;
         }
 

@@ -36,5 +36,8 @@
     <Page Update="ProductsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Teal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

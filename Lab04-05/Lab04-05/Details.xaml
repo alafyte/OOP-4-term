@@ -32,7 +32,7 @@
                 <materialDesign:PackIcon Kind="Close" />
             </Button>
             <TextBlock x:Name="ProductDescription" Text="" HorizontalAlignment="Left" Margin="19,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="168" Width="417" Grid.ColumnSpan="2" FontSize="14" TextWrapping="WrapWithOverflow" TextAlignment="Justify"/>
-            <TextBlock Text="{DynamicResource ProductDescription}" Style="{StaticResource MaterialDesignHeadline6TextBlock}"  HorizontalAlignment="Left" Margin="19,0,0,0" VerticalAlignment="Center" Width="150" Height="32" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+            <TextBlock Text="{DynamicResource ProductDescription}" Style="{StaticResource TextStyle}" FontSize="17"  HorizontalAlignment="Left" Margin="19,0,0,0" VerticalAlignment="Center" Width="150" Height="32" Foreground="{StaticResource PrimaryHueMidBrush}"/>
 
 
             <Border Grid.Column="1" HorizontalAlignment="Left" Height="7" Margin="23,70,0,0" Grid.Row="1" BorderThickness="1" CornerRadius="5,5,5,5" VerticalAlignment="Top" Width="219" RenderTransformOrigin="0.5,0.5" Background="{StaticResource PrimaryHueLightBrush}">

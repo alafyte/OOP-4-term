@@ -34,17 +34,16 @@
         </Grid.RowDefinitions>
 
         <!-- side navbar -->
-        <Rectangle Grid.Column="0" Grid.RowSpan="6" Opacity="0.3" Fill="{DynamicResource PrimaryHueLightBrush}"                  
+        <Rectangle Grid.Column="0" Grid.RowSpan="6" Opacity="0.3" Style="{StaticResource FillBrush}"                  
                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
                    materialDesign:ShadowAssist.ShadowEdges="Right"/>
 
 
         <Button x:Name="ProductsBtn" Grid.Row="2"
                 Command="w:Command.ShowCommand"
-                Style="{StaticResource MaterialDesignFlatLightButton}" 
+                Style="{StaticResource LightButton}" 
                 Content="{DynamicResource Products}"
                 IsDefault="True"
-                Foreground="{DynamicResource PrimaryHueMidBrush}"
                 VerticalAlignment="Top"
                
                 Height="50" Margin="0,29,0,0" />

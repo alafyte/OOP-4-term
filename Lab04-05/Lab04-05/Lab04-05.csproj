@@ -54,7 +54,6 @@
 
   <ItemGroup>
     <Folder Include="Cursors\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
 
   <ItemGroup>

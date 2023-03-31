@@ -76,18 +76,18 @@
              DragLeave="Drop_DragLeave" DragEnter="Drop_DragEnter" Stroke="{DynamicResource PrimaryHueLightBrush}" StrokeDashArray="3" Grid.Column="1">
             </Rectangle>
             <Button Command="w:Command.AddImageCommand" TabIndex="11"
-                  Style="{StaticResource MaterialDesignFlatLightButton}"
+                  Style="{StaticResource MidButton}"
                   Content="{DynamicResource AddImage}" Margin="44,51,183,52" Grid.Row="7" Grid.ColumnSpan="2"
                 />
 
 
             <Button x:Name="EditBtn" Command="w:Command.UpdateCommand" TabIndex="12"
-          Style="{StaticResource MaterialDesignOutlinedLightButton}"            
+          Style="{StaticResource MidButton}"            
           Content="{DynamicResource Edit}" Margin="85,26,97,25" Grid.Row="8" Height="40" Grid.ColumnSpan="2"    
          />
 
             <Button x:Name="AddBtn" Command="w:Command.AddCommand" Visibility="Collapsed" TabIndex="12"
-          Style="{StaticResource MaterialDesignOutlinedLightButton}"            
+          Style="{StaticResource MidButton}"            
           Content="{DynamicResource Add}" Margin="85,26,97,25" Grid.Row="8" Height="40" Grid.ColumnSpan="2"    
          />
             <TextBox x:Name="nameFieldEn" Grid.Row="2" Width="350" Height="40" TabIndex="2"

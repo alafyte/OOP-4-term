@@ -34,26 +34,25 @@
 
 
 
-        <Button HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Command="w:Command.AddCommand"                
-                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+        <Button HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" Command="w:Command.AddCommand"                
+                    Style="{StaticResource DarkButton}"
                     Content="{DynamicResource Add}"
-                    Foreground="White"
-                    Margin="10,7,386,2" Height="40" Cursor=""/>
+                    Foreground="White" Height="40"
+                    Margin="24,7,0,2" Cursor="" Width="101"/>
 
-        <Button x:Name="editBtn" HorizontalAlignment="Center" Command="w:Command.UpdateCommand"
-                Grid.Column="0" Grid.Row="0" 
-                Margin="172,7,224,2"                 
-                Style="{StaticResource MaterialDesignPaperLightButton}"
+        <Button x:Name="editBtn" HorizontalAlignment="Left" Command="w:Command.UpdateCommand"
+                Grid.Column="0" Grid.Row="0" Width="100"
+                Margin="179,6,0,3"                 
+                Style="{StaticResource MidButton}"
                 Content="{DynamicResource Edit}"
-                Foreground="#80CBC4"
                 IsEnabled="False" Height="40" Cursor="" />
 
-        <Button HorizontalAlignment="Center" x:Name="deleteBtn"
+        <Button HorizontalAlignment="Left" x:Name="deleteBtn"
                  Command="w:Command.DeleteCommand"
-                 Grid.Column="0" Grid.Row="0" Margin="336,7,61,2"
-                 Style="{StaticResource MaterialDesignPaperLightButton}"
+                 Grid.Column="0" Grid.Row="0" Margin="340,5,0,4"
+                 Style="{StaticResource MidButton}"
                  Content="{DynamicResource Delete}"
-                 Foreground="#80CBC4"
+                  Width="100"
                  IsEnabled="False"
                  Height="40" Cursor="" />
 
