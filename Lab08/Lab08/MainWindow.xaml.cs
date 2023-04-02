@@ -17,8 +17,6 @@ namespace Lab08
         public static string str;
         string script = "";
         string connectionString;
-        bool fl1 = false;
-        bool fl2 = false;
         DataTable planetsTable;
         DataTable satellitesTable;
         SqlConnection connection;
@@ -122,20 +120,6 @@ namespace Lab08
         }
         private void Procedure1_Click(object sender, RoutedEventArgs e)
         {
-            if (fl1 != false)
-                MessageBox.Show("Хранимая процедура была выполнена!");
-            else
-                GetNumberOfPlanets();
-        }
-        private void Procedure2_Click(object sender, RoutedEventArgs e)
-        {
-            if (fl2 != false)
-                MessageBox.Show("Хранимая процедура была выполнена!");
-            else
-                GetNumberOfSatellites();
-        }
-        private void GetNumberOfPlanets()
-        {
             string sqlExpression = "PROC_COUNT_PLANETS";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -159,9 +143,8 @@ namespace Lab08
                 reader.Close();
                 Window_Loaded(new object(), new RoutedEventArgs());
             }
-            fl1 = true;
         }
-        private void GetNumberOfSatellites()
+        private void Procedure2_Click(object sender, RoutedEventArgs e)
         {
             string sqlExpression = "PROC_COUNT_SATELLITES";
 
@@ -186,8 +169,8 @@ namespace Lab08
                 reader.Close();
                 Window_Loaded(new object(), new RoutedEventArgs());
             }
-            fl1 = true;
         }
+
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             Window_Loaded(sender, e);
@@ -280,18 +263,29 @@ namespace Lab08
         }
         private void Add_Planet_Click(object sender, RoutedEventArgs e)
         {
-            new Planet().ShowDialog();
+            var pl = new Planet();
+            try
+            {
+                pl.ShowDialog();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+                pl.Close();
+            }
         }
 
         private void Add_Satellite_Click(object sender, RoutedEventArgs e)
         {
+            var sat = new Satellite();
             try
             {
-                new Satellite().ShowDialog();
+                sat.ShowDialog();
             }
             catch(InvalidOperationException ex)
             {
                 MessageBox.Show(ex.Message);
+                sat.Close();
             }
         }
     }
