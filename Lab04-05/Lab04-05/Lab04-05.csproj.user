@@ -10,9 +10,6 @@
     <Compile Update="Details.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Message.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="ProductDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,9 +22,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Message.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProductDialog.xaml">

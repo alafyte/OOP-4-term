@@ -58,7 +58,6 @@
 
   <ItemGroup>
     <Resource Include="images\1.jpg" />
-    <Resource Include="images\1613402939_16-p-bezhevii-kosmos-fon-21.jpg" />
     <Resource Include="images\AirElementGoldNecklace.jpg" />
     <Resource Include="images\CrescentKeyBracelet.jpg" />
     <Resource Include="images\EarthElementGoldNecklace.jpg" />
@@ -67,11 +66,7 @@
     <Resource Include="images\HonorHeartMantraRing.jpg" />
     <Resource Include="images\icon.ico" />
     <Resource Include="images\icons8-align-left-16.png" />
-    <Resource Include="images\img.jpg" />
     <Resource Include="images\logo.png" />
-    <Resource Include="images\mainImage.jpg" />
-    <Resource Include="images\mainPhoto.jpg" />
-    <Resource Include="images\mainPhoto3.jpg" />
     <Resource Include="images\MoonphaseIvoryGoldRing.jpg" />
     <Resource Include="images\MoonphaseMauveGoldRing.jpg" />
     <Resource Include="images\OutofThisWorldBracelet.jpg" />

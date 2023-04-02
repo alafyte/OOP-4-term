@@ -16,8 +16,6 @@ namespace Lab04_05
         static CursorCollection()
         {
             cursors.Add("default", new Cursor(Path.Combine(projectDir, @"Cursors\AppStarting.ani")));
-            cursors.Add("pointer", new Cursor(Path.Combine(projectDir, @"Cursors\Hand.cur")));
-            cursors.Add("loading", new Cursor(Path.Combine(projectDir, @"Cursors\Wait.ani")));
         }
 
         public static Cursor GetCursor(string cursorType = "default")

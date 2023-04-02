@@ -1,32 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
-
-    <system:String x:Key="Show All">Всё</system:String>
-    <system:String x:Key="Necklaces">Ожерелья</system:String>
-    <system:String x:Key="Rings">Кольца</system:String>
-    <system:String x:Key="Earrings">Серьги</system:String>
-    <system:String x:Key="Wristwear">Браслеты</system:String>
-    <system:String x:Key="Login">Войти</system:String>
-    <system:String x:Key="Username">Логин</system:String>
-    <system:String x:Key="Password">Пароль</system:String>
-    <system:String x:Key="Next">ДАЛЕЕ</system:String>
-    <system:String x:Key="Language">Язык</system:String>
-    <system:String x:Key="Total">Всего</system:String>
-    <system:String x:Key="Back">Назад</system:String>
-    <system:String x:Key="Finish">Заказать</system:String>
-    <system:String x:Key="Register">Регистрация</system:String>
-    <system:String x:Key="RegisterComplete">Зарегистрироваться</system:String>
-    <system:String x:Key="ErrorMessage">Неверный логин или пароль</system:String>
-    <system:String x:Key="ErrorMessageEmpty">Корзина пуста!</system:String>
-    <system:String x:Key="ErrorName">Введите имя!</system:String>
-    <system:String x:Key="ErrorLastName">Введите фамилию!</system:String>
-    <system:String x:Key="ErrorLogin">Введите логин!</system:String>
-    <system:String x:Key="ErrorLoginExists">Пользователь с таким именем уже существует</system:String>
-    <system:String x:Key="ErrorPassword">Пароль должен содержать хотя бы одну букву и одну цифру. Длина пароля от 8 до 15 символов</system:String>
-    <system:String x:Key="ErrorEmail">Некорректный e-mail адрес!</system:String>
-    <system:String x:Key="ErrorEmailInUse">Этот E-mail адрес уже используется</system:String>
-    <system:String x:Key="ErrorDateBirth">Некорректная дата рождения!</system:String>
     <system:String x:Key="ErrorProductName">Некорректное название товара!</system:String>
     <system:String x:Key="ErrorProductPrice">Некорректная цена товара!</system:String>
     <system:String x:Key="ErrorProductQuantity">Некорректное количество товара!</system:String>
@@ -38,13 +12,6 @@
     <system:String x:Key="Edit">ИЗМЕНИТЬ</system:String>
     <system:String x:Key="Delete">УДАЛИТЬ</system:String>
     <system:String x:Key="Products">Каталог</system:String>
-    <system:String x:Key="Users">Пользователи</system:String>
-    <system:String x:Key="Statistics">Статистика</system:String>
-    <system:String x:Key="User">Пользователь</system:String>
-    <system:String x:Key="DateBirth">Дата рождения</system:String>
-    <system:String x:Key="E-mail">E-mail</system:String>
-    <system:String x:Key="Name">Имя</system:String>
-    <system:String x:Key="Lastname">Фамилия</system:String>
     <system:String x:Key="Type">Тип изделия</system:String>
     <system:String x:Key="Price">Цена</system:String>
     <system:String x:Key="Quantity">Количество</system:String>
@@ -54,11 +21,4 @@
     <system:String x:Key="ProductDescriptionEn">Описание (на английском)</system:String>
     <system:String x:Key="ProductDescription">Описание</system:String>
     <system:String x:Key="AddImage">Добавить рисунок</system:String>
-    <system:String x:Key="ItemsSold">Всего продано товаров</system:String>
-    <system:String x:Key="Profit">ВЫРУЧКА</system:String>
-    <system:String x:Key="Bills">Заказы</system:String>
-    <system:String x:Key="Themes">Темы</system:String>
-    <system:String x:Key="Blue">Бирюза</system:String>
-    <system:String x:Key="Red">Красная</system:String>
-    <system:String x:Key="Brown">Тёмная</system:String>
 </ResourceDictionary>
