@@ -41,53 +41,11 @@ namespace Lab08
             Sort_Satellites.Items.Add("По радиусу (убыванию)");
             Sort_Satellites.Items.Add("По расстоянию от планеты (возрастанию)");
             Sort_Satellites.Items.Add("По расстоянию от планеты (убыванию)");
-
-            using (connection = new SqlConnection("Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True"))
-            {
-                try
-                {
-                    connection.Open();
-                }
-                catch (SqlException)
-                {
-                    using(connection = new SqlConnection("Data Source=DESKTOP-MFP40AR;Integrated Security=True"))
-                    {
-                        try
-                        {
-                            connection.Open();
-                            var projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-                            string createDBQuery = "CREATE DATABASE Planets";
-                            SqlCommand createDBCommand = new SqlCommand(createDBQuery, connection);
-                            createDBCommand.ExecuteNonQuery();
-                            string createTablesQuery = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery1.sql");
-                            SqlCommand createTablesCommand = new SqlCommand(createTablesQuery, connection);
-                            createTablesCommand.ExecuteNonQuery();
-                            string insertDataTablesQuery = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery2.sql");
-                            SqlCommand insertCommand = new SqlCommand(insertDataTablesQuery, connection);
-                            insertCommand.ExecuteNonQuery();
-                            string createProc1Query = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery3.sql");
-                            SqlCommand createProc1Command = new SqlCommand(createProc1Query, connection);
-                            createProc1Command.ExecuteNonQuery();
-                            string createProc2Query = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery4.sql");
-                            SqlCommand createProc2Command = new SqlCommand(createProc2Query, connection);
-                            createProc2Command.ExecuteNonQuery();
-                        }
-                        catch(SqlException e)
-                        {
-                            MessageBox.Show(e.Message);
-                        }
-                    }
-                }
-                finally
-                {
-                    connection.Close();
-                    connectionString = "Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True";
-                }
-            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            CheckConnection();
             try
             {
                 connection = new SqlConnection(connectionString);
@@ -114,6 +72,52 @@ namespace Lab08
             finally
             {
                 connection.Close();
+            }
+        }
+        private void CheckConnection()
+        {
+
+            using (connection = new SqlConnection("Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True"))
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (SqlException)
+                {
+                    using (connection = new SqlConnection("Data Source=DESKTOP-MFP40AR;Integrated Security=True"))
+                    {
+                        try
+                        {
+                            connection.Open();
+                            var projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                            string createDBQuery = "CREATE DATABASE Planets";
+                            SqlCommand createDBCommand = new SqlCommand(createDBQuery, connection);
+                            createDBCommand.ExecuteNonQuery();
+                            string createTablesQuery = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery1.sql");
+                            SqlCommand createTablesCommand = new SqlCommand(createTablesQuery, connection);
+                            createTablesCommand.ExecuteNonQuery();
+                            string insertDataTablesQuery = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery2.sql");
+                            SqlCommand insertCommand = new SqlCommand(insertDataTablesQuery, connection);
+                            insertCommand.ExecuteNonQuery();
+                            string createProc1Query = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery3.sql");
+                            SqlCommand createProc1Command = new SqlCommand(createProc1Query, connection);
+                            createProc1Command.ExecuteNonQuery();
+                            string createProc2Query = File.ReadAllText(projectPath + @"\CreateScripts\SQLQuery4.sql");
+                            SqlCommand createProc2Command = new SqlCommand(createProc2Query, connection);
+                            createProc2Command.ExecuteNonQuery();
+                        }
+                        catch (SqlException e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
+                }
+                finally
+                {
+                    connection.Close();
+                    connectionString = "Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True";
+                }
             }
         }
         private void Procedure1_Click(object sender, RoutedEventArgs e)
