@@ -1,0 +1,70 @@
+﻿<Window x:Class="Lab08.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab08"
+        mc:Ignorable="d"
+     Title="Lab08" Height="565" Width="916" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Background" Value="Pink" />
+        </Style>
+
+    </Window.Resources>
+    <TabControl>
+        <TabItem Header="Планеты">
+            <Grid Background="#FFE5E5E5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="101*"/>
+                    <ColumnDefinition Width="809*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Background="#FFE1E9FF" Grid.ColumnSpan="2">
+                    <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" x:Name="PlanetsGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="Название" Foreground="Black" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Radius}" Header="Радиус" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Core_Temperature}" Header="Температура ядра" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Have_Atmosphere}" Header="Атмосфера" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Have_Life}" Header="Жизнь" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Image}" Header="Изображение (название)" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Height="72">
+                        <Button Click="Add_Planet_Click" Background="#FFC4C0FF" Content="Добавить" />
+                        <Button Click="Delete_Planet_Click" Background="#FFC4C0FF" Content="Удалить" />
+                        <Button Click="Update_Click" Background="#FFC4C0FF" Content="Обновить" />
+                        <ComboBox x:Name="Sort_Planets" SelectionChanged="SortPlanets" Height="30" Width="314"/>
+                        <Button Click="Procedure1_Click" Background="#FFC4C0FF" Content="Процедуры" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Спутники">
+            <Grid Background="#FFE5E5E5">
+                <StackPanel Background="#FFE1E9FF">
+                    <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" x:Name="SatellitesGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="Название" Foreground="Black" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Planet_Name}" Header="название планеты" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Radius}" Header="Радиус" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Planetary_Distance}" Header="Расстояние до планеты" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Image}" Header="Изображение (название)" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Height="72">
+                        <Button Click="Add_Satellite_Click" Background="#FFC4C0FF" Content="Добавить" />
+                        <Button Click="Delete_Satellite_Click" Background="#FFC4C0FF" Content="Удалить" />
+                        <Button Click="Update_Click" Background="#FFC4C0FF" Content="Обновить" />
+                        <ComboBox x:Name="Sort_Satellites" SelectionChanged="SortSatellites" Height="30" Width="314"/>
+                        <Button Click="Procedure2_Click" Background="#FFC4C0FF" Content="Процедуры" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
+

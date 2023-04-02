@@ -1,0 +1,32 @@
+﻿<Window x:Class="Lab08.Planet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab08"
+        mc:Ignorable="d"
+       Title="Планета" Height="530" Width="200" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFC4C0FF">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Название:" HorizontalAlignment="Center"/>
+            <TextBox x:Name="Name" Margin="25,0,25,25"/>
+            <TextBlock Text="Радиус:" HorizontalAlignment="Center"/>
+            <TextBox x:Name="Radius" Margin="25,0,25,25"/>
+            <TextBlock Text="Температура ядра:" HorizontalAlignment="Center"/>
+            <TextBox x:Name="Temp" Margin="25,0,25,25"/>
+            <TextBlock Text="Есть атмосфера?" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="25, 5, 25, 25">
+                <RadioButton x:Name="Atm" GroupName="Have_Atm" Content="Да" IsChecked="True" Margin="0, 0, 25, 0"/>
+                <RadioButton GroupName="Have_Atm" Content="Нет"/>
+            </StackPanel>
+            <TextBlock Text="Есть жизнь?" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="25, 5, 25, 25">
+                <RadioButton x:Name="Life" GroupName="Have_Life" Content="Да" IsChecked="True" Margin="0, 0, 25, 0"/>
+                <RadioButton GroupName="Have_Life" Content="Нет"/>
+            </StackPanel>
+            <Button Click="Button_Click" Content="Загрузить фото" Margin="25,0,25,25" Height="20"/>
+            <Image x:Name="imgDynamic" Height="100" Width="100"/>
+            <Button Content="Сохранить" Margin="25,25,25,25" Click="Button_Click1" Height="20"/>
+        </StackPanel>
+    </Grid>
+</Window>
