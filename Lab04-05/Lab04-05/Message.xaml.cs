@@ -25,31 +25,6 @@ namespace Lab04_05
             Cursor = CursorCollection.GetCursor();
             switch (errorMessage)
             {
-                case "WrongName":
-                    MessageContainer.Text = Application.Current.Resources["ErrorName"].ToString();
-                    break;
-                case "WrongLastName":
-                    MessageContainer.Text = Application.Current.Resources["ErrorLastName"].ToString();
-                    break;
-                case "WrongLogin":
-                    MessageContainer.Text = Application.Current.Resources["ErrorLogin"].ToString();
-                    break;
-                case "LoginAlreadyExists":
-                    MessageContainer.Text = Application.Current.Resources["ErrorLoginExists"].ToString();
-                    break;
-                case "WrongPassword":
-                    MessageContainer.FontSize = 14;
-                    MessageContainer.Text = Application.Current.Resources["ErrorPassword"].ToString();
-                    break;
-                case "WrongEmail":
-                    MessageContainer.Text = Application.Current.Resources["ErrorEmail"].ToString();
-                    break;
-                case "EmailAlreadyInUse":
-                    MessageContainer.Text = Application.Current.Resources["ErrorEmailInUse"].ToString();
-                    break;
-                case "WrongDateOfBirth":
-                    MessageContainer.Text = Application.Current.Resources["ErrorDateBirth"].ToString();
-                    break;
                 case "WrongProductName":
                     MessageContainer.Text = Application.Current.Resources["ErrorProductName"].ToString();
                     break;
