@@ -1,32 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
-
-    <system:String x:Key="Show All">Show All</system:String>
     <system:String x:Key="Necklaces">Necklaces</system:String>
     <system:String x:Key="Rings">Rings</system:String>
     <system:String x:Key="Earrings">Earrings</system:String>
     <system:String x:Key="Wristwear">Wristwear</system:String>
-    <system:String x:Key="Login">Login</system:String>
-    <system:String x:Key="Username">Username</system:String>
-    <system:String x:Key="Password">Password</system:String>
-    <system:String x:Key="Next">NEXT</system:String>
-    <system:String x:Key="Language">Language</system:String>
-    <system:String x:Key="Total">Total</system:String>
-    <system:String x:Key="Back">Back</system:String>
-    <system:String x:Key="Finish">FINISH</system:String>
-    <system:String x:Key="Register">Register</system:String>
-    <system:String x:Key="RegisterComplete">Register</system:String>
-    <system:String x:Key="ErrorMessage">Wrong login or password</system:String>
-    <system:String x:Key="ErrorMessageEmpty">Backet is empty!</system:String>
-    <system:String x:Key="ErrorName">Enter your name!</system:String>
-    <system:String x:Key="ErrorLastName">Enter your last name!</system:String>
-    <system:String x:Key="ErrorLogin">Enter your login!</system:String>
-    <system:String x:Key="ErrorLoginExists">User with the same username already exists</system:String>
-    <system:String x:Key="ErrorPassword">Password must contain at list one letter and one number. Password length is from 8 to 15 characters</system:String>
-    <system:String x:Key="ErrorEmail">Wrong e-mail address!</system:String>
-    <system:String x:Key="ErrorEmailInUse">This e-mail address is already in use</system:String>
-    <system:String x:Key="ErrorDateBirth">Wrong date of birth!</system:String>
     <system:String x:Key="ErrorProductName">Wrong product name!</system:String>
     <system:String x:Key="ErrorProductPrice">Wrong product price!</system:String>
     <system:String x:Key="ErrorProductQuantity">Wrong product quantity!</system:String>
@@ -38,13 +16,6 @@
     <system:String x:Key="Edit">EDIT</system:String>
     <system:String x:Key="Delete">DELETE</system:String>
     <system:String x:Key="Products">Products</system:String>
-    <system:String x:Key="Users">Users</system:String>
-    <system:String x:Key="Statistics">Statistics</system:String>
-    <system:String x:Key="User">User</system:String>
-    <system:String x:Key="DateBirth">Date of Birth</system:String>
-    <system:String x:Key="E-mail">E-mail</system:String>
-    <system:String x:Key="Name">Name</system:String>
-    <system:String x:Key="Lastname">Last Name</system:String>
     <system:String x:Key="Type">Product type</system:String>
     <system:String x:Key="Price">Price</system:String>
     <system:String x:Key="Quantity">Quantity</system:String>
@@ -54,11 +25,4 @@
     <system:String x:Key="ProductDescriptionEn">Product Description (english)</system:String>
     <system:String x:Key="ProductDescription">Description</system:String>
     <system:String x:Key="AddImage">Add Image</system:String>
-    <system:String x:Key="ItemsSold">NUMBER OF SOLD ITEMS</system:String>
-    <system:String x:Key="Profit">PROFIT</system:String>
-    <system:String x:Key="Bills">BILLS</system:String>
-    <system:String x:Key="Themes">Themes</system:String>
-    <system:String x:Key="Blue">TEAL</system:String>
-    <system:String x:Key="Red">RED</system:String>
-    <system:String x:Key="Brown">BROWN</system:String>
 </ResourceDictionary>
