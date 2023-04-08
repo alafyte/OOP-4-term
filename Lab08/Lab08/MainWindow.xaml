@@ -23,14 +23,14 @@
                     <ColumnDefinition Width="809*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Background="#FFE1E9FF" Grid.ColumnSpan="2">
-                    <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" x:Name="PlanetsGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
+                    <DataGrid CanUserSortColumns="False" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="PlanetsGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Name}" Header="Название" Foreground="Black" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Radius}" Header="Радиус" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Core_Temperature}" Header="Температура ядра" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Have_Atmosphere}" Header="Атмосфера" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Have_Life}" Header="Жизнь" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Image}" Header="Изображение (название)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay}" Header="Название" Foreground="Black" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Radius, Mode=TwoWay}" Header="Радиус" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Core_Temperature, Mode=TwoWay}" Header="Температура ядра" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Have_Atmosphere, Mode=TwoWay}" Header="Атмосфера" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Have_Life, Mode=TwoWay}" Header="Жизнь" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Image, Mode=TwoWay}" Header="Изображение (имя файла)" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel Orientation="Horizontal" Height="72">
@@ -46,13 +46,13 @@
         <TabItem Header="Спутники">
             <Grid Background="#FFE5E5E5">
                 <StackPanel Background="#FFE1E9FF">
-                    <DataGrid CanUserAddRows="False" AutoGenerateColumns="False" x:Name="SatellitesGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
+                    <DataGrid CanUserSortColumns="False" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="SatellitesGrid" HorizontalAlignment="Center" Width="900" Height="432" Background="Transparent">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding Name}" Header="Название" Foreground="Black" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Planet_Name}" Header="название планеты" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Radius}" Header="Радиус" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Planetary_Distance}" Header="Расстояние до планеты" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Image}" Header="Изображение (название)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay}" Header="Название" Foreground="Black" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Planet_Name, Mode=TwoWay}" Header="название планеты" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Radius, Mode=TwoWay}" Header="Радиус" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Planetary_Distance, Mode=TwoWay}" Header="Расстояние до планеты" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Image, Mode=TwoWay}" Header="Изображение (имя файла)" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel Orientation="Horizontal" Height="72">
