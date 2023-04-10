@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PlanetsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PLANETS">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Radius" Type="int" Nullable="false" />
+          <Property Name="Core_Temperature" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Have_Atmosphere" Type="bit" Nullable="false" />
+          <Property Name="Have_Life" Type="bit" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SATELLITES">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Planet_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Radius" Type="int" Nullable="false" />
+          <Property Name="Planetary_Distance" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_SATELLITES_Planet_Name">
+          <End Role="PLANETS" Type="Self.PLANETS" Multiplicity="1" />
+          <End Role="SATELLITES" Type="Self.SATELLITES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANETS">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="SATELLITES">
+              <PropertyRef Name="Planet_Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PlanetsModelStoreContainer">
+          <EntitySet Name="PLANETS" EntityType="Self.PLANETS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SATELLITES" EntityType="Self.SATELLITES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_SATELLITES_Planet_Name" Association="Self.FK_SATELLITES_Planet_Name">
+            <End Role="PLANETS" EntitySet="PLANETS" />
+            <End Role="SATELLITES" EntitySet="SATELLITES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PlanetsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PLANET">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Radius" Type="Int32" Nullable="false" />
+          <Property Name="Core_Temperature" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="Have_Atmosphere" Type="Boolean" Nullable="false" />
+          <Property Name="Have_Life" Type="Boolean" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SATELLITES" Relationship="Self.FK_SATELLITES_Planet_Name" FromRole="PLANETS" ToRole="SATELLITES" />
+        </EntityType>
+        <EntityType Name="SATELLITE">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Planet_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Radius" Type="Int32" Nullable="false" />
+          <Property Name="Planetary_Distance" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PLANET" Relationship="Self.FK_SATELLITES_Planet_Name" FromRole="SATELLITES" ToRole="PLANETS" />
+        </EntityType>
+        <Association Name="FK_SATELLITES_Planet_Name">
+          <End Role="PLANETS" Type="Self.PLANET" Multiplicity="1" />
+          <End Role="SATELLITES" Type="Self.SATELLITE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PLANETS">
+              <PropertyRef Name="Name" />
+            </Principal>
+            <Dependent Role="SATELLITES">
+              <PropertyRef Name="Planet_Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PlanetsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PLANETS" EntityType="Self.PLANET" />
+          <EntitySet Name="SATELLITES" EntityType="Self.SATELLITE" />
+          <AssociationSet Name="FK_SATELLITES_Planet_Name" Association="Self.FK_SATELLITES_Planet_Name">
+            <End Role="PLANETS" EntitySet="PLANETS" />
+            <End Role="SATELLITES" EntitySet="SATELLITES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PlanetsModelStoreContainer" CdmEntityContainer="PlanetsEntities">
+          <EntitySetMapping Name="PLANETS">
+            <EntityTypeMapping TypeName="PlanetsModel.PLANET">
+              <MappingFragment StoreEntitySet="PLANETS">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Radius" ColumnName="Radius" />
+                <ScalarProperty Name="Core_Temperature" ColumnName="Core_Temperature" />
+                <ScalarProperty Name="Have_Atmosphere" ColumnName="Have_Atmosphere" />
+                <ScalarProperty Name="Have_Life" ColumnName="Have_Life" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SATELLITES">
+            <EntityTypeMapping TypeName="PlanetsModel.SATELLITE">
+              <MappingFragment StoreEntitySet="SATELLITES">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Planet_Name" ColumnName="Planet_Name" />
+                <ScalarProperty Name="Radius" ColumnName="Radius" />
+                <ScalarProperty Name="Planetary_Distance" ColumnName="Planetary_Distance" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
