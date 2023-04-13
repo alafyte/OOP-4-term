@@ -1,0 +1,21 @@
+﻿<Window x:Class="Lab10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab10"
+        WindowStartupLocation="CenterScreen"
+        Title="Database" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="339*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" Margin="0, 150, 0, 150" Orientation="Vertical">
+            <Button VerticalAlignment="Top" x:Name="btn1" Background="Violet" Height="40" Width="100" Content="First part" Click="btn1_Click" />
+            <Button x:Name="btn2" Background="Violet" Margin="0, 30, 0, 0" Height="40" Width="100" Content="Second part" Click="btn2_Click"/>
+        </StackPanel>
+        <Frame Margin="10,10,10,10" NavigationUIVisibility="Hidden" x:Name="mainFrame"/>
+    </Grid>
+</Window>
