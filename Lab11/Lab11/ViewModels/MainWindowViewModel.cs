@@ -158,7 +158,7 @@ namespace Lab11
         {
             if (SelectedCourse == -1)
                 throw new ArgumentException("Выберите курс!");
-            if (StudentName.Length == 0)
+            if (StudentName == null || StudentName.Length == 0)
                 throw new ArgumentException("Введите имя!");
             if (StudentId == 0)
                 throw new ArgumentException("Введите номер студенческого!");
