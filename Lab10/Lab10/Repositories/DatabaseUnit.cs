@@ -27,7 +27,7 @@ namespace Lab10
             {
                 if (peopleRepository == null)
                 {
-                    peopleRepository = new PersonRepository();
+                    peopleRepository = new PersonRepository(db);
                 }
                 return peopleRepository;
             }
@@ -38,7 +38,7 @@ namespace Lab10
             {
                 if (ordersRepository == null)
                 {
-                    ordersRepository = new OrdersRepository();
+                    ordersRepository = new OrdersRepository(db);
                 }
                 return ordersRepository;
             }

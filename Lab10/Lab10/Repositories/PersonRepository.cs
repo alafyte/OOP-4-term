@@ -10,38 +10,39 @@ namespace Lab10
 {
     public class PersonRepository : IRepository<Person>
     {
-        Context db = new Context();
-        public PersonRepository()
+        Context _db;
+        public PersonRepository(Context db)
         {
-            db.People.Load();
+            _db = db;
+            _db.People.Load();
         }
         public BindingList<Person> GetAll()
         {
-            db.SaveChanges();
-            return db.People.Local.ToBindingList();
+            _db.SaveChanges();
+            return _db.People.Local.ToBindingList();
         }
         public Person Get(int id)
         {
-            db.SaveChanges();
-            return db.People.Include(p => p.Orders).FirstOrDefault(p => p.ID == id);
+            _db.SaveChanges();
+            return _db.People.Include(p => p.Orders).FirstOrDefault(p => p.ID == id);
         }
         public void Add(Person person)
         {
-            db.People.Add(person);
-            db.SaveChanges();
+            _db.People.Add(person);
+            _db.SaveChanges();
         }
         public void Update(Person person)
         {
-            db.Entry(person).State = EntityState.Modified;
-            db.SaveChanges();
+            _db.Entry(person).State = EntityState.Modified;
+            _db.SaveChanges();
         }
         public void Delete(int id)
         {
-            var orders = db.Orders.Where(o => o.PersonId == id);
+            var orders = _db.Orders.Where(o => o.PersonId == id);
             foreach (var o in orders)
-                db.Orders.Remove(o);
-            db.People.Remove(db.People.Where(p => p.ID == id).Single());
-            db.SaveChanges();
+                _db.Orders.Remove(o);
+            _db.People.Remove(_db.People.Where(p => p.ID == id).Single());
+            _db.SaveChanges();
         }
     }
 }

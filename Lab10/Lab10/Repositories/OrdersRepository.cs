@@ -10,35 +10,36 @@ namespace Lab10
 {
     public class OrdersRepository : IRepository<Order>
     {
-        Context db = new Context();
-        public OrdersRepository()
+        Context _db;
+        public OrdersRepository(Context db)
         {
-            db.Orders.Load();
+            _db = db;
+            _db.Orders.Load();
         }
         public BindingList<Order> GetAll()
         {
-            db.SaveChanges();
-            return db.Orders.Local.ToBindingList();
+            _db.SaveChanges();
+            return _db.Orders.Local.ToBindingList();
         }
         public Order Get(int id)
         {
-            db.SaveChanges();
-            return db.Orders.FirstOrDefault(o => o.ID == id);
+            _db.SaveChanges();
+            return _db.Orders.FirstOrDefault(o => o.ID == id);
         }
         public void Add(Order order)
         {
-            db.Orders.Add(order);
-            db.SaveChanges();
+            _db.Orders.Add(order);
+            _db.SaveChanges();
         }
         public void Update(Order order)
         {
-            db.Entry(order).State = EntityState.Modified;
-            db.SaveChanges();
+            _db.Entry(order).State = EntityState.Modified;
+            _db.SaveChanges();
         }
         public void Delete(int id)
         {
-            db.Orders.Remove(db.Orders.Where(o => o.ID == id).Single());
-            db.SaveChanges();
+            _db.Orders.Remove(_db.Orders.Where(o => o.ID == id).Single());
+            _db.SaveChanges();
         }
     }
 }
