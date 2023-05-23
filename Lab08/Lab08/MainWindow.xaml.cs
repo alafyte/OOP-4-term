@@ -17,6 +17,7 @@ namespace Lab08
         public static string str;
         string script = "";
         string connectionString;
+        bool connectionChecked = false;
         DataTable planetsTable;
         DataTable satellitesTable;
         SqlConnection connection;
@@ -43,7 +44,8 @@ namespace Lab08
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            CheckConnection();
+            if(!connectionChecked)
+                CheckConnection();
             try
             {
                 connection = new SqlConnection(connectionString);
@@ -115,6 +117,7 @@ namespace Lab08
                 {
                     connection.Close();
                     connectionString = "Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True";
+                    connectionChecked = true;
                 }
             }
         }
@@ -173,6 +176,9 @@ namespace Lab08
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
+            SqlCommandBuilder comandbuilder = new SqlCommandBuilder(adapter1);
+            adapter1.Update(planetsTable);
+            adapter1.Update(satellitesTable);
             Window_Loaded(sender, e);
         }
         private void Delete_Planet_Click(object sender, RoutedEventArgs e)
@@ -191,6 +197,7 @@ namespace Lab08
             }
             SqlCommandBuilder comandbuilder = new SqlCommandBuilder(adapter1);
             adapter1.Update(planetsTable);
+            Window_Loaded(sender, e);
         }
         private void Delete_Satellite_Click(object sender, RoutedEventArgs e)
         {
@@ -208,6 +215,7 @@ namespace Lab08
             }
             SqlCommandBuilder comandbuilder = new SqlCommandBuilder(adapter2);
             adapter2.Update(satellitesTable);
+            Window_Loaded(sender, e);
         }
         private void SortSatellites(object sender, RoutedEventArgs e)
         {
@@ -267,6 +275,7 @@ namespace Lab08
             try
             {
                 pl.ShowDialog();
+                Window_Loaded(sender, e);
             }
             catch (InvalidOperationException ex)
             {
@@ -281,6 +290,7 @@ namespace Lab08
             try
             {
                 sat.ShowDialog();
+                Window_Loaded(sender, e);
             }
             catch(InvalidOperationException ex)
             {

@@ -10,7 +10,7 @@ CONSTRAINT PK_PLANETS PRIMARY KEY (Name)
 )
 CREATE TABLE SATELLITES (
 Name nvarchar(50) NOT NULL,
-Planet_Name nvarchar(50) NOT NULL CONSTRAINT FK_SATELLITES_Planet_Name FOREIGN KEY REFERENCES Planets(Name),
+Planet_Name nvarchar(50) NOT NULL CONSTRAINT FK_SATELLITES_Planet_Name FOREIGN KEY REFERENCES Planets(Name) ON UPDATE CASCADE,
 Radius int NOT NULL,
 Planetary_Distance int NOT NULL,
 Image nvarchar(50),
