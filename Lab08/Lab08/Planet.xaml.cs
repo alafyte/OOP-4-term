@@ -29,7 +29,7 @@ namespace Lab08
         public Planet()
         {
             InitializeComponent();
-            connectionString = "Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True";
+            connectionString = MainWindow.connectionString;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

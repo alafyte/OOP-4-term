@@ -32,7 +32,7 @@ namespace Lab08
         public Satellite()
         {
             InitializeComponent();
-            connectionString = "Data Source=DESKTOP-MFP40AR;Initial Catalog=Planets;Integrated Security=True";
+            connectionString = MainWindow.connectionString;
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

@@ -16,7 +16,7 @@ namespace Lab08
     {
         public static string str;
         string script = "";
-        string connectionString;
+        public static string connectionString;
         bool connectionChecked = false;
         DataTable planetsTable;
         DataTable satellitesTable;
